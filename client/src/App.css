@@ -1,0 +1,211 @@
+body {
+    background-color: #121212;
+}
+
+.app-container {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #373737;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff5722;
+    /* border-bottom: 2px solid white; */
+    font-size: 28px;
+}
+
+h3 {
+    text-align: left;
+    color: white;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    color: #cccccc;
+}
+
+.graph-container h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 0px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid black;
+}
+
+.loading,
+.error-message {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+    color: #d32f2f;
+    border-left: 4px solid #d32f2f;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    background-color: #5c5c5c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notes-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.graph-section {
+    flex: 2;
+    height: 705px;
+    min-height: 500px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fafafa;
+}
+
+.note-input textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #333;
+    border-radius: 8px;
+    color: white;
+    resize: vertical;
+    margin-bottom: 10px;
+    font-family: inherit;
+}
+
+.note-input button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.text-align-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.text-align-right button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+.note-input button:hover {
+    background-color: #45a049;
+}
+
+.notes-list ul {
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+.notes-list li {
+    background-color: #2c2c2c;
+    border: 1px solid #888;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    /* transition: all 0.2s ease; */
+    transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
+.notes-list li:hover {
+    border: 1px solid #ff7962;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notes-list li.selected {
+    border: 2px solid #ff5722;
+    background-color: #333;
+}
+
+.notes-list li.selected {
+    border: 2px solid #ff6347;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.3);
+}
+
+.notes-list li:hover .note-actions {
+    display: flex;
+}
+
+.note-content {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.note-actions {
+    display: none;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.note-actions button {
+    background-color: #e7e7e7;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.note-actions button:first-child {
+    background-color: #2196f3;
+    color: white;
+}
+
+.note-actions button:last-child {
+    background-color: #f44336;
+    color: white;
+}
+
+.note-actions button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+.graph-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.graph-svg {
+    width: 100%;
+    height: 650px;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .note-actions {
+        display: flex !important;
+    }
+}
